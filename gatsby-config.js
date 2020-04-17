@@ -51,7 +51,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-transformer-javascript-frontmatter",
+    //"gatsby-transformer-javascript-frontmatter",
     //{
     //  resolve: `gatsby-plugin-sharp`,
     //  options: {
@@ -103,6 +103,14 @@ module.exports = {
         cookieDomain: "example.com",
       },
     },
+    {
+      resolve: `gatsby-plugin-tawk`,
+      options: {
+        tawkId: "5e77c1ad8d24fc2265895053",
+
+        // get this from the tawk script widget
+      },
+    },
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     {
@@ -110,7 +118,7 @@ module.exports = {
       options: {
         name: config.manifestName,
         short_name: config.manifestShortName,
-        start_url: config.pathPrefix || config.manifestStartUrl,
+        start_url: config.pathPrefix,
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
@@ -119,5 +127,7 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-  ]
-}
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+  ],
+};

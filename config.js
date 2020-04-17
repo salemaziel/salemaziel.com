@@ -6,8 +6,8 @@ module.exports = {
     manifestBackgroundColor: '#663399',
     manifestThemeColor: '#663399',
     manifestDisplay: 'standalone',
-    manifestIcon: 'src/assets/images/persona.png',
-    pathPrefix: '/content/shop', // This path is subpath of your hosting https://domain/portfolio
+    manifestIcon: `src/assets/images/persona-lightshadow.png`,
+    pathPrefix: `/content/shop`, // This path is subpath of your hosting https://domain/portfolio
     authorName: 'SalemAziel',
     heading: 'Whats Good?',
     // social
@@ -29,4 +29,4 @@ module.exports = {
       },
     ],
   };
-  
+
