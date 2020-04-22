@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -8,7 +8,7 @@ import layoutStyles from "../css/layout.module.css";
 import ProfilePic from "./profilepic";
 import Footer from "./footer";
 
-import { theme } from "../styles/theme";
+//import { theme } from "../styles/theme";
 
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
@@ -25,23 +25,23 @@ class Layout extends React.Component {
       isPreloaded: true
     };
   }
-  componentDidMount() {
-    if (window.Snipcart) {
-      window.Snipcart.api.configure("show_continue_shopping", true);
-    }
-  }
+//  componentDidMount() {
+//    if (window.Snipcart) {
+//      window.Snipcart.api.configure("show_continue_shopping", true);
+//    }
+//  }
 
-  componentDidMount() {
-    this.timeoutId = setTimeout(() => {
-      this.setState({ isPreloaded: false });
-    }, 100);
-  }
+//  componentDidMount() {
+//    this.timeoutId = setTimeout(() => {
+//     this.setState({ isPreloaded: false });
+//    }, 100);
+//  }
 
-  componentWillUnmount() {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
-    }
-  }
+//  componentWillUnmount() {
+//    if (this.timeoutId) {
+//      clearTimeout(this.timeoutId);
+//    }
+//  }
 
   render() {
     const { children } = this.props;

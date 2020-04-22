@@ -1,43 +1,51 @@
-import React from 'react'
+import React from "react";
 
+import Card from "react-bootstrap/Card";
+import servicescardcontentStyles from "./ServicesCardContent.module.css";
+import Button from "../../button";
 
-import Card from 'react-bootstrap/Card'
-import servicescardcontentStyles from "./ServicesCardContent.module.css"
-import Button from '../../button'
-
-import { Link } from 'gatsby'
+import { Link } from "gatsby";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faSnapchat } from "@fortawesome/free-brands-svg-icons"
 
-
 class ServicesCardContent extends React.Component {
-   render() {
+  render() {
     return (
+      <>
+        <Card.Title className={servicescardcontentStyles.cardTitle}>
+          <h1>Services I Offer</h1>
+        </Card.Title>
         <Card.Body className={servicescardcontentStyles.cardBody}>
-        
-          
-            <Card.Title className={servicescardcontentStyles.cardTitle}>
-                <h1>Services I Offer
-                </h1>
-            </Card.Title>
-           
+          <Container>
+              <Row>
+                <Col>
+                    <div style={{display: 'inline-block', height: '10em', width: '10em', outline: '2px solid', outlineColor: 'white'}} />
+                </Col>
+
+                <Col>
+                <div style={{display: 'inline-block', height: '10em', width: '10em', outline: '2px solid', outlineColor: 'white'}} />
+                </Col>
+
+                <Col>
+                <div style={{display: 'inline-block', height: '10em', width: '10em', outline: '2px solid', outlineColor: 'white'}} />
+                </Col>
+              </Row>
             <Card.Text>
-                <ul>
-                    <li>
-                        Website Design, Development, and Maintenance
-                    </li>
-                    <li>
-                        Mautic Marketing Automation 
-                        -Shared Accounts
-                        -Personal Installs
-                    </li>
-                    <li>
-                        Video Conferencing Server Installs
-                        -Embed in your website
-                    </li>
-                </ul>
-                {/*<div style={{
+              <ul>
+                <li>Website Design, Development, and Maintenance</li>
+                <li>
+                  Mautic Marketing Automation -Shared Accounts -Personal
+                  Installs
+                </li>
+                <li>
+                  Video Conferencing Server Installs -Embed in your website
+                </li>
+              </ul>
+              {/*<div style={{
                     display: 'grid',
                     justifyContent: 'center',
                     alignContent: 'center',
@@ -50,15 +58,12 @@ class ServicesCardContent extends React.Component {
               
               <Button primary prefetch href="https://codestaff-salem.appointlet.com/s/1-hour-consultation/salem">Book Consultation</Button>
             </div>*/}
-                   
-                
-                </Card.Text>
-  
-                
+            </Card.Text>
+          </Container>
         </Card.Body>
-
-        )
-    };
+      </>
+    );
+  }
 }
 
-export default ServicesCardContent
+export default ServicesCardContent;

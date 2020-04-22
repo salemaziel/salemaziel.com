@@ -59,22 +59,22 @@ class DaNav extends React.Component {
           }
           titleStyle={{ background: "inherit", color: "#black" }}
           items={[
-            <Link rel="preload" className="nav-link" to="/">
+            <Link rel="preload" /*className="nav-link"*/ to="/" className={layoutStyles.daNavLinks}>
               Home
             </Link>,
-            <Link rel="preload" className="nav-link" to="/about">
+            <Link rel="preload" /*className="nav-link"*/ to="/about" className={layoutStyles.daNavLinks}>
               About
             </Link>,
-            <Link rel="preload" className="nav-link" to="/services">
+            <Link rel="preload" /*className="nav-link"*/ to="/services" className={layoutStyles.daNavLinks}>
               Services
             </Link>,
-            <Link rel="preload" className="nav-link" to="/contact">
+            <Link rel="preload" /*className="nav-link"*/ to="/contact" className={layoutStyles.daNavLinks}>
               Contact
             </Link>,
           ]}
           itemStyle={{
             background: "inherit",
-            color: "#fff",
+            color: "inherit",
             fontSize: "inherit",
             padding: "0.5rem 0",
           }}

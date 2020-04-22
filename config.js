@@ -1,5 +1,6 @@
 module.exports = {
     siteTitle: "SalemAziel", // <title>
+    siteUrl: "https://salemaziel.com",
     manifestName: "SalemAziel",
     manifestShortName: "SalemAziel", // max 12 characters
     manifestStartUrl: '/',
@@ -7,7 +8,7 @@ module.exports = {
     manifestThemeColor: '#663399',
     manifestDisplay: 'standalone',
     manifestIcon: `src/assets/images/persona-lightshadow.png`,
-    pathPrefix: `/content/shop`, // This path is subpath of your hosting https://domain/portfolio
+    pathPrefix: `/`, // This path is subpath of your hosting https://domain/portfolio
     authorName: 'SalemAziel',
     heading: 'Whats Good?',
     // social

@@ -1,8 +1,10 @@
 const config = require('./config');
+const path = require(`path`)
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     {
@@ -10,6 +12,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content`,
         name: `content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `assets`, `images`),
       },
     },
     {
@@ -51,31 +60,14 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    //"gatsby-transformer-javascript-frontmatter",
-    //{
-    //  resolve: `gatsby-plugin-sharp`,
-    //  options: {
-    //    useMozJpeg: false,
-    //    stripMetadata: true,
-    //    defaultQuality: 75,
-     // },
-    //},
-    //},
+    "gatsby-transformer-javascript-frontmatter",
     {
-      resolve: 'gatsby-plugin-snipcart',
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        //replace with own Snipcart API key
-        apiKey: 'ZjVkN2M3YzEtOGU0Yy00ZTUzLWFiZGQtNTNkZjY3NGM2YThkNjM3MDg5MjIyODA1Nzg2OTk5',
-        autopop: true,
-          }
-    },
-    {
-      resolve: 'gatsby-plugin-snipcart',
-      options: {
-        //replace with own Snipcart API key
-        apiKey: 'MjQ2MDY4MDctMDZkYi00ZTY0LWFlODItNzhlMmEzZDg1NTBiNjM2OTc2Nzk1NjcwMTU3MTkx',
-        autopop: true,
-          }
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,

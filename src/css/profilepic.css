@@ -38,6 +38,7 @@ h1.profileName:hover{
 }
 a:hover {
     text-decoration: none!important;
+    color: white;
 }
 
 @media screen and (min-width: 2400px) {
